@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FUNCIONES</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            display: grid;
+            /*los px son los espaios de columnas, por cada uno es una columna nueva*/
+            /*grid-template-columns: 25% 50% 200px;*/
+             /*los px es el tamaño de la fila, por cada valor es una fila, aca le asignamos tamaño a dos filas*/
+            /*grid-template-rows: 300px 300px;*/
+            /*NUEVA UNIDAD DE MEDIDA FR, DIVIDE EN PARTES IGUALES*/
+            grid-template: 300px 100px 1px / 1fr 1fr 1fr;
+            /*grid-column-gap: 30px;*/
+            /*grid-row-gap: 30px;*/
+            /*resumido*/
+            grid-gap:10px 10px;
+
+        }
+        .item{
+            background:lightblue;
+            padding: 10px;
+            border: 1px solid red;
+            
+        }
+        /*tomar elemento que yo le diga en este caso el 4*/
+        .item:nth-of-type(4){
+            background: blue;
+            overflow: auto;
+            display: grid;
+            grid-template: 50px 50px 50px / 50px 50px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">#1</div>
+        <div class="item">#3</div>
+        <div class="item">#3</div>
+        <div class="item">
+            <div class="item">#subitem 1</div>
+            <div class="item">#subitem 2</div>
+            <div class="item">#subitem 3</div>
+            <div class="item">#subitem 4</div>
+            <div class="item">#subitem 5</div>
+        </div>
+        <div class="item">#5</div>
+        <div class="item">#6</div>
+        <div class="item">#7</div>
+        <div class="item">#8</div>
+        <div class="item">#9</div>
+        <div class="item">#10</div>
+        <div class="item">#11</div>
+        <div class="item">#12</div>
+
+    </div>
+    
+</body>
+</html>
